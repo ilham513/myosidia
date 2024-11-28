@@ -98,8 +98,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			  
 			  <form method="post" action="<?=site_url('login/login_go')?>">
 				  <div class="form-outline form-white mb-2">
-					<input type="text" name="nama_admin" id="typeEmailX" class="form-control mb-1 custom-input-border form-control-lg" />
-					<label class="form-label" for="typeEmailX">ID</label>
+					<input type="text" name="username" id="typeEmailX" class="form-control mb-1 custom-input-border form-control-lg" />
+					<label class="form-label" for="typeEmailX">Username</label>
 				  </div>
 
 				  <div class="form-outline form-white mb-4">
