@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
-	<title>Waktu</title>
+	<title>Edit Waktu</title>
 
 	<link href="<?=base_url()?>css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -41,40 +41,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3">Pembagian Waktu</h1>
+					<h1 class="h3 mb-3">Edit Waktu</h1>
 
-					<div class="row mb-2 justify-content-end"> <div class="col-auto"> <a href="<?=site_url('admin/waktu_add')?>"><button type="button" class="btn btn-success">Tambah Blok Waktu</button></a> </div> </div>
-
-					<div class="row">
-						<div class="col-12">
-							<div class="card">
-								<div class="card-body">
-                                <table class="table table-striped" id="sortableTable">
-                                    <thead>
-                                        <tr>
-                                        <th onclick="sortTable(0)">Hari <i class="fas fa-sort"></i>
-                                        </th>
-                                        <th onclick="sortTable(1)">Jam <i class="fas fa-sort"></i>
-                                        </th>
-                                        <th>Aksi
-                                        </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-<?php foreach($array_waktu as $waktu): ?>
-                      <tr>
-                        <th scope="row"><?=$waktu->id?></th>
-                        <td><?=$waktu->hari?></td>
-                        <td><?=$waktu->jam?></td>
-                        <td><a href="<?=site_url('admin/waktu_delete/').$waktu->id?>"><i class="fas fa-trash-alt me-2"></i></a> <a href="<?=site_url('admin/waktu_edit/').$waktu->id?>"><i class="fas fa-edit me-2"></i></a></td>
-                      </tr>
-<?php endforeach; ?>
-									</tbody>
-                                    </table>
-								</div>
-							</div>
-						</div>
-					</div>
+                    <form action="<?=site_url('admin/waktu_edit_go');?>" method="post">
+					<input name="id" type="hidden" value="<?=$obj_waktu->id?>" class="form-control">
+                        <div class="mb-3">
+                            <label for="hari" class="form-label">Hari</label>
+							<input name="hari" type="text" class="form-control" value="<?=$obj_waktu->hari?>" id="jamMulai" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="jamMulai" class="form-label">Jam Mulai</label>
+                            <input name="jam" type="text" class="form-control" value="<?=$obj_waktu->jam?>" id="jamMulai" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
 
 				</div>
 			</main>

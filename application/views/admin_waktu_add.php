@@ -43,10 +43,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					<h1 class="h3 mb-3">Tambah Blok Waktu</h1>
 
-                    <form>
+                    <form action="<?=site_url('admin/waktu_add_go');?>" method="post">
                         <div class="mb-3">
                             <label for="hari" class="form-label">Hari</label>
-                            <select class="form-select" id="hari" required>
+                            <select name="hari" class="form-select" id="hari" required>
                             <option selected disabled value="">Pilih Hari</option>
                             <option>Senin</option>
                             <option>Selasa</option>
@@ -59,11 +59,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="mb-3">
                             <label for="jamMulai" class="form-label">Jam Mulai</label>
-                            <input type="time" class="form-control" id="jamMulai" required>
+                            <input name="waktu_mulai" type="time" class="form-control" id="jamMulai" required>
                         </div>
                         <div class="mb-3">
                             <label for="jamSelesai" class="form-label">Jam Selesai</label>
-                            <input type="time" class="form-control" id="jamSelesai" required>
+                            <input name="waktu_selesai" type="time" class="form-control" id="jamSelesai" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
