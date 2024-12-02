@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					<h1 class="h3 mb-3">Data Karyawan</h1>
 
-					<div class="row mb-2 justify-content-end"> <div class="col-auto"> <button type="button" class="btn btn-success">Tambah Karyawan</button> </div> </div>
+					<div class="row mb-2 justify-content-end"> <div class="col-auto"> <a href="<?=site_url('admin/karyawan_add');?>"><button type="button" class="btn btn-success">Tambah Karyawan</button></a> </div> </div>
 
 					<div class="row">
 						<div class="col-12">
@@ -54,28 +54,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <tr>
                                         <th onclick="sortTable(0)">Nama <i class="fas fa-sort"></i>
                                         </th>
-                                        <th onclick="sortTable(1)">Umur <i class="fas fa-sort"></i>
+                                        <th onclick="sortTable(1)">Jenis Kelamin <i class="fas fa-sort"></i>
                                         </th>
-                                        <th onclick="sortTable(2)">Alamat <i class="fas fa-sort"></i>
+                                        <th onclick="sortTable(2)">Nomor Telpon <i class="fas fa-sort"></i>
                                         </th>
                                         <th>Aksi
                                         </th>
                                         </tr>
                                     </thead>
                                     <tbody>
+									<?php foreach($array_karyawan as $karyawan): ?>
                                         <tr>
-                                            <td>Ahmad Pratama</td>
-                                            <td>25</td>
-                                            <td>Bandung</td>
-                                            <td><i class="fas fa-trash-alt me-2"></i> <i class="fas fa-edit me-2"></i></td>
+                                            <td><?=$karyawan->nama_karyawan?></td>
+                                            <td><?=$karyawan->jenis_kelamin?></td>
+                                            <td><?=$karyawan->nomor_telpon?></td>
+                                            <td><a href="<?=site_url('admin/karyawan_delete/').$karyawan->id_karyawan?>"><i class="fas fa-trash-alt me-2"></i></a> <a href="<?=site_url('admin/karyawan_edit/').$karyawan->id_karyawan?>"><i class="fas fa-edit me-2"></i></a></td>
                                         </tr>
-                                        <tr>
-                                            <td>Budi Santoso</td>
-                                            <td>20</td>
-                                            <td>Jakarta</td>
-                                            <td><i class="fas fa-trash-alt me-2"></i> <i class="fas fa-edit me-2"></i></td>
-                                        </tr>
-                                    </tbody>
+									<?php endforeach; ?>
+									</tbody>
                                     </table>
 								</div>
 							</div>

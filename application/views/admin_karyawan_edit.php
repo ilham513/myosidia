@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
-	<title>MyOsidia</title>
+	<title>Karyawan Edit</title>
 
 	<link href="<?=base_url()?>css/app.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <span class="align-middle">MyOsidia</span>
         </a>
 
-		<?php $this->load->view('component/sidebar.php');?>
+        <?php $this->load->view('component/sidebar.php');?>
 			
 		</nav>
 
@@ -38,47 +38,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<?php $this->load->view('component/navbar') ?>
 
-			<main class="content">
-			  <div class="container-fluid p-0">
-			    <h1 class="h3 mb-3">
-			      Dashboard
-			    </h1>
-			    <div class="container mt-3">
-			      <div class="row">
-			        <div class="col-md-4">
-			          <div class="card text-white bg-primary mb-3">
-			            <div class="card-body">
-			              <div class="d-flex justify-content-between align-items-center">
-			                <div>
-			                  <h5 class="card-title text-white">Karyawan</h5>
-			                  <p class="card-text"><?=$jumlah_karyawan;?></p>
-			                </div>
-			                <div>
-								<i class="fas fa-user fa-3x"></i>
-			                </div>
-			              </div>
-			            </div>
-			          </div>
-			        </div>
-			        <div class="col-md-4">
-			          <div class="card text-white bg-success mb-3">
-			            <div class="card-body">
-			              <div class="d-flex justify-content-between align-items-center">
-			                <div>
-			                  <h5 class="card-title text-white">Jadwal</h5>
-			                  <p class="card-text">46</p>
-			                </div>
-			                <div>
-								<i class="fas fa-calendar fa-3x"></i>
-			                </div>
-			              </div>
-			            </div>
-			          </div>
-			        </div>
-			      </div>
-			    </div>
-			  </div>
+            <main class="content">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">Edit Karyawan</h1>
+
+                    <form action="<?=site_url('admin/karyawan_edit_go');?>" method="post">
+						<input name="id_karyawan" type="hidden" value="<?=$obj_karyawan->id_karyawan?>" class="form-control">
+                        <div class="mb-3">
+                            <label for="jamMulai" class="form-label">Nama karyawan</label>
+                            <input name="nama_karyawan" value="<?=$obj_karyawan->nama_karyawan?>" type="text" class="form-control" id="jamMulai" required>
+                        </div>
+						<div class="mb-3">
+                            <label for="jamSelesai" class="form-label">Jenis kelamin</label>
+                            <input name="jenis_kelamin" type="text" value="<?=$obj_karyawan->jenis_kelamin?>" class="form-control" id="jamSelesai" required>
+                        </div>
+						<div class="mb-3">
+                            <label for="jamSelesai" class="form-label">Nomor telpon</label>
+                            <input name="nomor_telpon" type="text" value="<?=$obj_karyawan->nomor_telpon?>" class="form-control" id="jamSelesai" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+
+				</div>
 			</main>
+
 
 			<footer class="footer">
 				<div class="container-fluid">
@@ -96,7 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<script src="<?=base_url()?>js/app.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <script> function sortTable(n) { var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0; table = document.getElementById("sortableTable"); switching = true; dir = "asc"; while (switching) { switching = false; rows = table.rows; for (i = 1; i < (rows.length - 1); i++) { shouldSwitch = false; x = rows[i].getElementsByTagName("TD")[n]; y = rows[i + 1].getElementsByTagName("TD")[n]; if (dir == "asc") { if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) { shouldSwitch = true; break; } } else if (dir == "desc") { if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) { shouldSwitch = true; break; } } } if (shouldSwitch) { rows[i].parentNode.insertBefore(rows[i + 1], rows[i]); switching = true; switchcount++; } else { if (switchcount == 0 && dir == "asc") { dir = "desc"; switching = true; } } } } </script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
