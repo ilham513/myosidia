@@ -35,44 +35,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</nav>
 
 		<div class="main">
-            <?php $this->load->view('component/navbar') ?>
-            
+
+		<?php $this->load->view('component/navbar') ?>
+
             <main class="content">
 				<div class="container-fluid p-0">
 
-					<h1 class="h3 mb-3">Jadwal Kerja</h1>
+					<h1 class="h3 mb-3">Tambah Jadwal</h1>
 
-					<div class="row mb-2 justify-content-end"> <div class="col-auto"> <button type="button" class="btn btn-danger">Reset Jadwal</button>  <a href="<?=site_url('admin/jadwal_otomatis')?>"><button type="button" class="btn btn-primary">Buat Jadwal Otomatis</button></a> <a href="<?=site_url('admin/jadwal_add')?>"><button type="button" class="btn d-none btn-success">Tambah Jadwal</button></a> </div> </div>
-
-					<div class="row">
-						<div class="col-12">
-							<div class="card">
-								<div class="card-body">
-                                <table class="table table-striped" id="sortableTable">
-                                    <thead>
-                                        <tr>
-                                        <th onclick="sortTable(0)">Nama <i class="fas fa-sort"></i>
-                                        </th>
-                                        <th onclick="sortTable(1)">Waktu <i class="fas fa-sort"></i>
-                                        </th>
-                                        <th>Aksi
-                                        </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-									<?php foreach($array_jadwal as $jadwal): ?>
-                                        <tr>
-                                            <td><?=$jadwal->nama_karyawan?></td>
-                                            <td><?=$jadwal->waktu_kerja?></td>
-                                            <td><a href="<?=site_url('admin/jadwal_delete/').$jadwal->id?>"><i class="fas fa-trash-alt me-2"></i></a> <a href="<?=site_url('admin/jadwal_edit/').$jadwal->id?>"><i class="fas fa-edit me-2"></i></a></td>
-                                        </tr>
-									<?php endforeach; ?>
-                                    </tbody>
-                                    </table>
-								</div>
-							</div>
-						</div>
-					</div>
+                    <form action="<?=site_url('admin/waktu_add_go');?>" method="post">
+                        <div class="mb-3">
+                            <label for="hari" class="form-label">Hari</label>
+                            <select name="hari" class="form-select" id="hari" required>
+                            <option selected disabled value="">Pilih Hari</option>
+                            <option>Senin</option>
+                            <option>Selasa</option>
+                            <option>Rabu</option>
+                            <option>Kamis</option>
+                            <option>Jumat</option>
+                            <option>Sabtu</option>
+                            <option>Minggu</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="jamMulai" class="form-label">Jam Mulai</label>
+                            <input name="waktu_mulai" type="time" class="form-control" id="jamMulai" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="jamSelesai" class="form-label">Jam Selesai</label>
+                            <input name="waktu_selesai" type="time" class="form-control" id="jamSelesai" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
 
 				</div>
 			</main>

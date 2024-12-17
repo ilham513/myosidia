@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0" version="24.8.6">
+  <diagram name="Page-1" id="_meB9-nLkYBqK3dcO6xU">
+    <mxGraphModel dx="1444" dy="753" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gEaedENufTtvG54QmVz3-3" value="" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gEaedENufTtvG54QmVz3-1" target="gEaedENufTtvG54QmVz3-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-1" value="&lt;div&gt;&lt;b&gt;Permasalahan&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Pembuatan jadwal kerja karyawan kurang efektif&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="90" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-13" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gEaedENufTtvG54QmVz3-2" target="gEaedENufTtvG54QmVz3-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-2" value="&lt;b&gt;Pengumpulan data&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="190" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-14" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="gEaedENufTtvG54QmVz3-4" target="gEaedENufTtvG54QmVz3-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-4" value="&lt;b&gt;Data penelitian&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="290" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-11" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gEaedENufTtvG54QmVz3-5" target="gEaedENufTtvG54QmVz3-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-5" value="&lt;b&gt;Pengembangan aplikasi&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="400" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-12" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="gEaedENufTtvG54QmVz3-6" target="gEaedENufTtvG54QmVz3-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-6" value="&lt;b&gt;Implementasi&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="500" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-7" value="&lt;b&gt;Hasil&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="610" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-17" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gEaedENufTtvG54QmVz3-15" target="gEaedENufTtvG54QmVz3-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-15" value="&lt;div&gt;&lt;b&gt;Metode&lt;/b&gt;&lt;/div&gt;&lt;div&gt;1. Observasi langsung&lt;/div&gt;&lt;div&gt;2. Kepustakaan&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="190" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-18" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="gEaedENufTtvG54QmVz3-16" target="gEaedENufTtvG54QmVz3-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gEaedENufTtvG54QmVz3-16" value="&lt;div&gt;&lt;b&gt;Metode RAD&lt;/b&gt;&lt;/div&gt;&lt;div&gt;1. Perencanaan kebutuhan&lt;/div&gt;&lt;div&gt;2. Mendesain sistem&lt;/div&gt;&lt;div&gt;3. Pengembangan dan feedback&lt;/div&gt;&lt;div&gt;4. Implementasi dan pemeliharaan&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="400" width="290" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

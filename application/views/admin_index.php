@@ -66,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			              <div class="d-flex justify-content-between align-items-center">
 			                <div>
 			                  <h5 class="card-title text-white">Jadwal</h5>
-			                  <p class="card-text">46</p>
+			                  <p class="card-text"><?=$jumlah_jadwal;?></p>
 			                </div>
 			                <div>
 								<i class="fas fa-calendar fa-3x"></i>

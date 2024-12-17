@@ -13,6 +13,7 @@ class Admin extends CI_Controller {
 	public function index()
 	{
 		$data['jumlah_karyawan'] = $this->crud_model->menghitung_jumlah_row('karyawan');
+		$data['jumlah_jadwal'] = $this->crud_model->menghitung_jumlah_row('jadwal');
 
 		$this->load->view('admin_index.php', $data);
 	}
@@ -26,7 +27,9 @@ class Admin extends CI_Controller {
 
 	public function jadwal()
 	{
-		$this->load->view('admin_jadwal.php');
+		$data['array_jadwal'] = $this->crud_model->mengambil_data('jadwal');
+
+		$this->load->view('admin_jadwal.php', $data);
 	}
 
 	public function waktu()
@@ -39,6 +42,11 @@ class Admin extends CI_Controller {
 	public function waktu_add()
 	{
 		$this->load->view('admin_waktu_add.php');
+	}
+
+	public function jadwal_add()
+	{
+		$this->load->view('admin_jadwal_add.php');
 	}
 
 	public function karyawan_add()
@@ -158,6 +166,15 @@ class Admin extends CI_Controller {
 		redirect('admin/karyawan', 'refresh');
 	}	
 
+	function jadwal_otomatis(){
+		set_time_limit(120);
+		$this->load->model('m_admin');
+		$data['penyewa'] = $this->m_admin->tampil_data('karyawan')->result();
+		$data['waktu'] = $this->m_admin->tampil_data('waktu')->result();
+
+		// var_dump($data);die();
+		$this->load->view('v_admin_jadwal_otomatis',$data);		
+	}
 
 
 }
