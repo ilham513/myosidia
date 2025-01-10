@@ -49,6 +49,14 @@ class Admin extends CI_Controller {
 		$this->load->view('admin_jadwal_add.php');
 	}
 
+	public function reset_jadwal()
+	{
+		$this->db->truncate('Jadwal');
+
+		//redirect
+		redirect('/admin/jadwal', 'refresh');		
+	}
+
 	public function karyawan_add()
 	{
 		$this->load->view('admin_karyawan_add.php');
@@ -74,7 +82,6 @@ class Admin extends CI_Controller {
 
 	public function karyawan_add_go()
 	{
-		// var_dump($_POST);die();
 		//variabel data
 
 		$data = array(
@@ -85,7 +92,20 @@ class Admin extends CI_Controller {
 		
 		//tampilkan view
 		$this->crud_model->masukan_data('karyawan', $data);
+
+		$obj_karyawan = $this->crud_model->get_last_row('karyawan');
+
+		$data = array(
+			'id_user' => $this->input->post('id_user'),
+			'password_user' => $this->input->post('password_user'),
+			'id_karyawan' => $obj_karyawan->id_karyawan
+		);
+
+		// var_dump($data);die();
 		
+		//tampilkan view
+		$this->crud_model->masukan_data('user', $data);
+
 		//redirect
 		redirect('/admin/karyawan', 'refresh');
 

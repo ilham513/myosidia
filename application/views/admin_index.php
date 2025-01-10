@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			      <div class="row">
 			        <div class="col-md-4">
 			          <div class="card text-white bg-primary mb-3">
-			            <div class="card-body">
+			            <div class="card-body" onclick="location.href='<?=site_url('admin/karyawan')?>';">
 			              <div class="d-flex justify-content-between align-items-center">
 			                <div>
 			                  <h5 class="card-title text-white">Karyawan</h5>
@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			        </div>
 			        <div class="col-md-4">
 			          <div class="card text-white bg-success mb-3">
-			            <div class="card-body">
+			            <div class="card-body" onclick="location.href='<?=site_url('admin/jadwal')?>';">
 			              <div class="d-flex justify-content-between align-items-center">
 			                <div>
 			                  <h5 class="card-title text-white">Jadwal</h5>

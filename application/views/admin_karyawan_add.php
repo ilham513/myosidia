@@ -60,6 +60,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <label for="jamSelesai" class="form-label">Nomor telpon</label>
                             <input name="nomor_telpon" type="text" class="form-control" id="jamSelesai" required>
                         </div>
+						<div class="mb-3">
+                            <label for="jamSelesai" class="form-label">ID Karyawan</label>
+                            <input name="id_user" type="text" class="form-control" id="jamSelesai" required>
+                        </div>
+						<div class="mb-3">
+                            <label for="jamSelesai" class="form-label">Password</label>
+                            <input name="password_user" type="password" class="form-control" id="jamSelesai" required>
+                        </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
 

@@ -105,8 +105,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <a class="nav-link active" aria-current="page" href="<?=site_url()?>">Beranda</a>
         </li>
       </ul>
-      <span class="navbar-text">
+      <span class="navbar-text me-2">
         <a href="<?=site_url('login')?>">Admin</a>
+      </span>
+      <span class="navbar-text">
+        <a href="<?=site_url('user')?>">Karyawan</a>
       </span>
     </div>
   </div>

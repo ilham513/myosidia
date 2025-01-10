@@ -178,4 +178,6 @@ class Crud_model extends CI_Model{
 		return $tgl_indo;
 	}	
 
+	public function get_last_row($nama_tabel) { $this->db->order_by('id_'.$nama_tabel, 'DESC'); $this->db->limit(1); $query = $this->db->get($nama_tabel); return $query->row();}
+
 }

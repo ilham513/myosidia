@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					<h1 class="h3 mb-3">Jadwal Kerja</h1>
 
-					<div class="row mb-2 justify-content-end"> <div class="col-auto"> <button type="button" class="btn btn-danger">Reset Jadwal</button>  <a href="<?=site_url('admin/jadwal_otomatis')?>"><button type="button" class="btn btn-primary">Buat Jadwal Otomatis</button></a> <a href="<?=site_url('admin/jadwal_add')?>"><button type="button" class="btn d-none btn-success">Tambah Jadwal</button></a> </div> </div>
+					<div class="row mb-2 justify-content-end"> <div class="col-auto"> <a href="<?=site_url('admin/reset_jadwal')?>"><button type="button" class="btn btn-danger">Reset Jadwal</button></a>  <a href="<?=site_url('admin/jadwal_otomatis')?>"><button type="button" class="btn btn-primary">Buat Jadwal Otomatis</button></a> <a href="<?=site_url('admin/jadwal_add')?>"><button type="button" class="btn d-none btn-success">Tambah Jadwal</button></a> </div> </div>
 
 					<div class="row">
 						<div class="col-12">
