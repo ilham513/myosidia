@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2024 at 01:05 PM
+-- Generation Time: Jan 11, 2025 at 05:39 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -52,6 +52,14 @@ CREATE TABLE `jadwal` (
   `waktu_kerja` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `jadwal`
+--
+
+INSERT INTO `jadwal` (`id`, `nama_karyawan`, `waktu_kerja`) VALUES
+(1, 'ilham', 'Rabu, 08:00 - 09:30'),
+(2, 'vino', 'Kamis, 10:00 - 11:00');
+
 -- --------------------------------------------------------
 
 --
@@ -61,9 +69,37 @@ CREATE TABLE `jadwal` (
 CREATE TABLE `karyawan` (
   `id_karyawan` int(255) NOT NULL,
   `nama_karyawan` varchar(255) NOT NULL,
-  `jenis_kelamin` varchar(5) NOT NULL,
+  `jenis_kelamin` varchar(255) NOT NULL,
   `nomor_telpon` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `karyawan`
+--
+
+INSERT INTO `karyawan` (`id_karyawan`, `nama_karyawan`, `jenis_kelamin`, `nomor_telpon`) VALUES
+(8, 'ilham', 'Laki-laki', '089999999'),
+(9, 'vino', 'Laki-laki', '0899898989');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id_user` varchar(255) NOT NULL,
+  `password_user` varchar(255) NOT NULL,
+  `id_karyawan` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `password_user`, `id_karyawan`) VALUES
+('ilham', 'ilham', 8),
+('vino', 'vino', 9);
 
 -- --------------------------------------------------------
 
@@ -76,6 +112,16 @@ CREATE TABLE `waktu` (
   `hari` varchar(255) NOT NULL,
   `jam` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `waktu`
+--
+
+INSERT INTO `waktu` (`id`, `hari`, `jam`) VALUES
+(3, 'Rabu', '08:00 - 09:30'),
+(4, 'Kamis', '10:00 - 11:00'),
+(5, 'Senin', '10:00 - 11:00'),
+(6, 'Sabtu', '18:00 - 20:00');
 
 --
 -- Indexes for dumped tables
@@ -100,6 +146,13 @@ ALTER TABLE `karyawan`
   ADD PRIMARY KEY (`id_karyawan`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id_user`),
+  ADD KEY `id_karyawan` (`id_karyawan`);
+
+--
 -- Indexes for table `waktu`
 --
 ALTER TABLE `waktu`
@@ -119,19 +172,29 @@ ALTER TABLE `akun`
 -- AUTO_INCREMENT for table `jadwal`
 --
 ALTER TABLE `jadwal`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `karyawan`
 --
 ALTER TABLE `karyawan`
-  MODIFY `id_karyawan` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_karyawan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `waktu`
 --
 ALTER TABLE `waktu`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`id_karyawan`) REFERENCES `karyawan` (`id_karyawan`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

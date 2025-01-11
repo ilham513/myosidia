@@ -96,14 +96,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			  
 			  <hr class="pb-2"/>
 			  
-			  <form method="post" action="<?=site_url('login/login_go')?>">
+			  <form method="post" action="<?=site_url('user/login_user')?>">
 				  <div class="form-outline form-white mb-2">
-					<input type="text" name="username" id="typeEmailX" class="form-control mb-1 custom-input-border form-control-lg" />
-					<label class="form-label" for="typeEmailX">Username</label>
+					<input type="text" name="id_user" id="typeEmailX" class="form-control mb-1 custom-input-border form-control-lg" />
+					<label class="form-label" for="typeEmailX">ID User</label>
 				  </div>
 
 				  <div class="form-outline form-white mb-4">
-					<input type="password" name="password" id="typePasswordX" class="form-control mb-1 custom-input-border form-control-lg" />
+					<input type="password" name="password_user" id="typePasswordX" class="form-control mb-1 custom-input-border form-control-lg" />
 					<label class="form-label" for="typePasswordX">Password</label>
 				  </div>
 

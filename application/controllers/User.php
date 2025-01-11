@@ -31,28 +31,28 @@ class User extends CI_Controller {
                 'login' => true
             ));
 			// print_r($_SESSION);die();
-            redirect('user/view_kasus');
+            redirect('user/view_jadwal');
         } else {
             $this->session->set_flashdata('error', 'Username atau password salah');
 			echo '<script>alert("Id atau password salah. Mohon tulis kembali!")</script>';
-            redirect('akun/akun_pelapor', 'refresh');
+            redirect('user', 'refresh');
         }
     }
     
     public function logout_user() {
         $this->session->sess_destroy();
-        redirect('akun/akun_pelapor');
+        redirect('user');
     }
 
-	public function view_kasus()
+	public function view_jadwal()
 	{
 		// var_dump($this->session->userdata('id_pelapor'));die();
 
-		$data['array_kasus'] = $this->crud_model->mengambil_data_join_id('kasus', ['pelapor'] ,'pelapor.id_pelapor',$this->session->userdata('id_pelapor'));
+		$data['array_jadwal'] = $this->crud_model->mengambil_data('jadwal');
 		// print_r($_SESSION);die();
 		// var_dump($data);die();
 		
-		$this->load->view('user_view_kasus',$data);
+		$this->load->view('user_view_jadwal',$data);
 	}	
 	
 	public function view_absen_id($id)
